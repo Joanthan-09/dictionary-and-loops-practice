@@ -36,11 +36,11 @@ def search_student(full_name):
     """
     # first step: 
     # create a loop to loop throughthe students
-    for students in students: 
+    for student in students: 
     # then compare the name field to the search term
        if student["name"].lower() == full_name.lower():
             # if found, return the dictionary 
-            return student
+            return students
             
     # if not found, return None
     return None
@@ -124,14 +124,14 @@ while True:
         
 
         # Display results
-        if result:
-        print("\nStudent foudn: ")
-        print("CPS ID:", result["cps_id"])
-        print("Name:", result["name"])
-        print("Homeroom:", result["homeroom"])
-        print("Grade:", result["grade"])
-        print("Primary Email:", result["primary_email"])
-        print("Secondary Email:", result["secondary_email"])
+    if result:
+        print("\nStudent found: ")
+        print("CPS ID:", result[0]["cps_id"])
+        print("Name:", result[0]["name"])
+        print("Homeroom:", result[0]["homeroom"])
+        print("Grade:", result[0]["grade"])
+        print("Primary Email:", result[0]["primary_email"])
+        print("Secondary Email:", result[0]["secondary_email"])
         for key, value in result .item():
                 print(f"{key}: {value}")
 
@@ -140,7 +140,7 @@ while True:
             print("\nStudent not found.")
 
     elif choice == "2":
-        
+        add_student()
 
     elif choice == "3":
         print("Goodbye!")
