@@ -94,11 +94,11 @@ def add_student():
     students.append(new_student)
 
     # Confirmation
-   print("Student added succesfully.")
-   print(new_student)
-   print("---------------------")
-   print(f"Total students in syestem: {len(studnets)}")
-   print("new record:", new_student)
+    print("Student added succesfully.")
+    print(new_student)
+    print("---------------------")
+    print(f"Total students in syestem: {len(studnets)}")
+    print("new record:", new_student)
 
 
 # -----------------------------------------
@@ -125,14 +125,14 @@ while True:
 
         # Display results
         if result:
-            print("\nStudent foudn: ")
-            print("CPS ID:", result["cps_id"])
-            print("Name:", result["name"])
-            print("Homeroom:", result["homeroom"])
-            print("Grade:", result["grade"])
-            print("Primary Email:", result["primary_email"])
-            print("Secondary Email:", result["secondary_email"])
-            for key, value in result .item():
+        print("\nStudent foudn: ")
+        print("CPS ID:", result["cps_id"])
+        print("Name:", result["name"])
+        print("Homeroom:", result["homeroom"])
+        print("Grade:", result["grade"])
+        print("Primary Email:", result["primary_email"])
+        print("Secondary Email:", result["secondary_email"])
+        for key, value in result .item():
                 print(f"{key}: {value}")
 
         else:
